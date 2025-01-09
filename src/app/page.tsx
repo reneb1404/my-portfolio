@@ -103,130 +103,101 @@ export default function HomePage() {
 							<u>Education</u>
 						</h1>
 						<ul className="timeline timeline-vertical text-primary">
-							<li>
-								<div className="timeline-end timeline-box bg-primary-content">
-									<h2 className="text-sm">February 2021 - Present</h2>
-									<h3 className="text-lg">
-										<b>Municipality Saerbeck</b> as <b>Sysadmin</b>
-									</h3>
-								</div>
-								<div className="timeline-middle">
-									<CircleCheck className="size-6" />
-								</div>
-								<hr />
-							</li>
-							<li>
-								<hr />
-								<div className="timeline-end timeline-box bg-primary-content">
-									<h2 className="text-sm">August 2019 - July 2020</h2>
-									<h3 className="text-lg">
-										<b>High School Diploma</b>
-									</h3>
-								</div>
-								<div className="timeline-middle">
-									<CircleCheck className="size-6" />
-								</div>
-								<hr />
-							</li>
-							<li>
-								<hr />
-								<div className="timeline-end timeline-box bg-primary-content">
-									<h2 className="text-sm">August 2015 - July 2019</h2>
-									<h3 className="text-lg">
-										<b>Subject-related entrance qualification</b>
-									</h3>
-								</div>
-								<div className="timeline-middle">
-									<CircleCheck className="size-6" />
-								</div>
-							</li>
+							{educationData.map((education) => (
+								<EducationList
+									key={education.title}
+									time={education.time}
+									company={education.company}
+									title={education.title}
+								/>
+							))}
 						</ul>
 					</div>
 					<div id="skills" className="flex flex-col gap-5">
 						<h1 className="font-bold text-2xl text-center">Skills</h1>
 						<ul className="timeline timeline-vertical text-primary">
-							<li>
-								<div className="timeline-start timeline-box bg-primary-content">
-									<h3 className="text-lg">
-										<b>JavaScript/TypeScript</b>
-									</h3>
-								</div>
-								<div className="timeline-middle">
-									<CircleCheck className="size-6" />
-								</div>
-								<hr />
-							</li>
-							<li>
-								<hr />
-								<div className="timeline-start timeline-box bg-primary-content">
-									<h3 className="text-lg">
-										<b>NextJS</b>
-									</h3>
-								</div>
-								<div className="timeline-middle">
-									<CircleCheck className="size-6" />
-								</div>
-								<hr />
-							</li>
-							<li>
-								<hr />
-								<div className="timeline-start timeline-box bg-primary-content">
-									<h3 className="text-lg">
-										<b>React</b>
-									</h3>
-								</div>
-								<div className="timeline-middle">
-									<CircleCheck className="size-6" />
-								</div>
-							</li>
-							<li>
-								<hr />
-								<div className="timeline-start timeline-box bg-primary-content">
-									<h3 className="text-lg">
-										<b>HTML</b>
-									</h3>
-								</div>
-								<div className="timeline-middle">
-									<CircleCheck className="size-6" />
-								</div>
-							</li>
-							<li>
-								<hr />
-								<div className="timeline-start timeline-box bg-primary-content">
-									<h3 className="text-lg">
-										<b>Tailwind CSS</b>
-									</h3>
-								</div>
-								<div className="timeline-middle">
-									<CircleCheck className="size-6" />
-								</div>
-							</li>
-							<li>
-								<hr />
-								<div className="timeline-start timeline-box bg-primary-content">
-									<h3 className="text-lg">
-										<b>Git</b>
-									</h3>
-								</div>
-								<div className="timeline-middle">
-									<CircleCheck className="size-6" />
-								</div>
-							</li>
-							<li>
-								<hr />
-								<div className="timeline-start timeline-box bg-primary-content">
-									<h3 className="text-lg">
-										<b>SQL</b>
-									</h3>
-								</div>
-								<div className="timeline-middle">
-									<CircleCheck className="size-6" />
-								</div>
-							</li>
+							{skillData.map((skill) => (
+								<SkillList key={skill.title} title={skill.title} />
+							))}
 						</ul>
 					</div>
 				</div>
 			</section>
 		</>
+	);
+}
+
+const skillData = [
+	{ title: "JavaScript/TypeScript" },
+	{ title: "NextJS" },
+	{ title: "React" },
+	{ title: "HTML" },
+	{ title: "Tailwind CSS" },
+	{ title: "Git" },
+	{ title: "SQL" },
+];
+
+const educationData = [
+	{
+		time: "February 2021 - Present",
+		company: "Municipality Saerbeck",
+		title: "Sysadmin",
+	},
+	{
+		time: "August 2019 - July 2020",
+		title: "High School Diploma",
+	},
+	{
+		time: "August 2015 - July 2019",
+		title: "Subject-related entrance qualification",
+	},
+];
+
+function SkillList({ title }: { title: string }) {
+	return (
+		<li>
+			{title == "JavaScript/TypeScript" ? "" : <hr />}
+			<div className="timeline-start timeline-box bg-primary-content">
+				<h3 className="text-lg">
+					<b>{title}</b>
+				</h3>
+			</div>
+			<div className="timeline-middle">
+				<CircleCheck className="size-6" />
+			</div>
+			{title == "SQL" ? "" : <hr />}
+		</li>
+	);
+}
+
+function EducationList({
+	time,
+	company,
+	title,
+}: {
+	time: string;
+	company?: string;
+	title: string;
+}) {
+	return (
+		<li>
+			{title == "Sysadmin" ? "" : <hr />}
+			<div className="timeline-end timeline-box bg-primary-content">
+				<h2 className="text-sm">{time}</h2>
+				{company ? (
+					<h3 className="text-lg">
+						<b>{company}</b> as <b>{title}</b>
+					</h3>
+				) : (
+					<h3 className="text-lg">
+						<b>{title}</b>
+					</h3>
+				)}
+			</div>
+			<div className="timeline-middle">
+				<CircleCheck className="size-6" />
+			</div>
+			{title == "Subject-related entrance qualification" ? "" : <hr />}
+		</li>
 	);
 }
