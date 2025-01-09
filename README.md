@@ -30,10 +30,10 @@ It is modern, responsive, and user-friendly, offering an easy way for visitors t
 
 ## 🛠️ Technologies Used
 
-- **HTML** and **CSS**: For structure and styling
 - **TypeScript**: For interactivity
-- **Next.js**: - For dynamic components
+- **Nextjs**: For dynamic components
 - **Vercel**: For deployment
+- **DaisyUI**: For UI
 
 ## 🔧 Installation
 
