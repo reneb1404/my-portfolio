@@ -1,19 +1,13 @@
 # 🖌️ My Portfolio Project
 
----
-
 Welcome!
 This project showcases my skills and work as a [Job Title, e.g., Web Developer, Graphic Designer]. I created it to display my creativity and expertise in an engaging way.
 
 ## 🚀 Live Demo
 
----
-
 To be updated
 
 ## 📜 Table of Contents
-
----
 
 1. [About the Project](#-about-the-project)
 2. [Features](#-features)
@@ -24,14 +18,10 @@ To be updated
 
 ## 📖 About the Project
 
----
-
 This portfolio is designed to showcase my past projects, skills, and experience.
 It is modern, responsive, and user-friendly, offering an easy way for visitors to explore my work.
 
 ## ✨ Features
-
----
 
 - 🌟 Overview of my projects
 - 💼 Details about my skills and experience
@@ -40,16 +30,12 @@ It is modern, responsive, and user-friendly, offering an easy way for visitors t
 
 ## 🛠️ Technologies Used
 
----
-
 - **HTML** and **CSS**: For structure and styling
 - **TypeScript**: For interactivity
 - **[Framework]**:Next.JS - For dynamic components
 - **[Vercel]**: For deployment
 
 ## 🔧 Installation
-
----
 
 If you'd like to run the project locally, follow these steps:
 
@@ -69,12 +55,8 @@ If you'd like to run the project locally, follow these steps:
 
 ## 📬 Contact
 
----
-
 If you like my portfolio or have any questions, feel free to reach out:
 
 - **GitHub**: @reneb1404
-
----
 
 Thank you for taking the time to view my portfolio! 🙌
