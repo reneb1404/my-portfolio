@@ -32,8 +32,8 @@ It is modern, responsive, and user-friendly, offering an easy way for visitors t
 
 - **HTML** and **CSS**: For structure and styling
 - **TypeScript**: For interactivity
-- **[Framework]**:Next.JS - For dynamic components
-- **[Vercel]**: For deployment
+- **Next.js**: - For dynamic components
+- **Vercel**: For deployment
 
 ## 🔧 Installation
 
